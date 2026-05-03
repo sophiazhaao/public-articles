@@ -30,12 +30,6 @@
       text-decoration: underline;
     }
 
-    .detail-img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-    }
-
     .detail-title { margin: 1rem 0 0.25rem; }
     .detail-date { margin: 0.25rem 0; opacity: 0.6; font-size: 0.9rem; }
     .detail-body { margin-top: 1rem; line-height: 1.7; }
@@ -50,19 +44,16 @@
 <!-- LIST PAGE -->
 <div id="list-page">
   <div class="entry" data-index="0">
-    <img src="img/post1.png" alt="post 1 photo">
     <h2>my first post</h2>
     <p class="date">january 3, 2025</p>
   </div>
 
   <div class="entry" data-index="1">
-    <img src="img/post2.png" alt="post 2 photo">
     <h2>a second post</h2>
     <p class="date">february 14, 2025</p>
   </div>
 
   <div class="entry" data-index="2">
-    <img src="img/post3.png" alt="post 3 photo">
     <h2>another thing i wrote</h2>
     <p class="date">march 22, 2025</p>
   </div>
@@ -71,7 +62,6 @@
 <!-- DETAIL PAGE -->
 <div id="detail-page">
   <button class="back-btn" id="back-btn">← back to all posts</button>
-  <img class="detail-img" id="detail-img" src="" alt="">
   <h2 class="detail-title" id="detail-title"></h2>
   <p class="detail-date" id="detail-date"></p>
   <div class="detail-body" id="detail-body"></div>
@@ -84,19 +74,16 @@
 
   const entries = [
     {
-      img: 'img/post1.png', alt: 'post 1 photo',
       title: 'my first post',
       date: 'january 3, 2025',
       body: 'Write your full post content here. This can be as long as you like — it only shows up on the detail page, so the list stays clean. Add multiple paragraphs, thoughts, stories, whatever you want!'
     },
     {
-      img: 'img/post2.png', alt: 'post 2 photo',
       title: 'a second post',
       date: 'february 14, 2025',
       body: 'Your second post content goes here. You can write as much as you want and it will all appear nicely on the detail page when someone clicks through.'
     },
     {
-      img: 'img/post3.png', alt: 'post 3 photo',
       title: 'another thing i wrote',
       date: 'march 22, 2025',
       body: 'Third post content here. Remember: update both the HTML entry div above AND the matching object in this entries array when you add a new post.'
@@ -106,7 +93,6 @@
   $('.entry').on('click', function () {
     const i = $(this).data('index');
     const e = entries[i];
-    $('#detail-img').attr({ src: e.img, alt: e.alt });
     $('#detail-title').text(e.title);
     $('#detail-date').text(e.date);
     $('#detail-body').text(e.body);
