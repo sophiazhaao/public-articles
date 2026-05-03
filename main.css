@@ -62,7 +62,7 @@ body {
     color: #5C4033;
     font-size: 1.4em;
     font-family: sans-serif;
-    margin: 0;
+    margin-left: 12px;
 }
 .entry > .date {
     font-family: sans-serif;
