@@ -36,45 +36,42 @@ body {
     src: url("fonts/unicorn-giggles.regular.ttf");
 }
 .entry {
-    width: 800px;
+    width: 580px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: 10px;
     border: solid #5C4033 3px;
     box-shadow: 8px 8px rgba(183, 193, 172, 0.75);
-    padding: 20px 30px;
+    padding: 16px 24px;
     box-sizing: border-box;
-    transition: transform 0.7s ease-in-out;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.entry:hover {
+    opacity: 0.8;
+}
+.entry .entry-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.entry > h2 {
+    color: #5C4033;
+    font-size: 1.4em;
+    font-family: sans-serif;
+    margin: 0;
 }
 .entry > .date {
     font-family: sans-serif;
-    font-size: 0.95em;
+    font-size: 0.85em;
     color: #5C4033;
     opacity: 0.7;
     font-style: italic;
-    margin: 0 0 8px 0;
-}
-.entry > h2 {
-    color: #5C4033;
-    font-size: 1.75em;
-    font-family: sans-serif;
-    margin: 0 0 10px 0;
-}
-.entry > .body {
-    font-size: 1.05em;
-    line-height: 1.6;
     margin: 0;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    color: #333;
-}
-.entry:hover {
-    transform: scale(1.02);
+    white-space: nowrap;
 }
 
-/* Detail page */
 #detail-page {
     display: none;
     width: 800px;
