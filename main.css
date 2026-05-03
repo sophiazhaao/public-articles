@@ -38,12 +38,12 @@ body {
 .entry {
     width: 580px;
     margin: auto;
-    margin-bottom: 20px;
+	margin-top: 16px;
+    margin-bottom: 16px;
     border-radius: 10px;
     border: solid #5C4033 3px;
     box-shadow: 8px 8px rgba(183, 193, 172, 0.75);
     padding: 16px 16px;
-	margin: 16px;
     box-sizing: border-box;
     cursor: pointer;
     transition: opacity 0.2s;
