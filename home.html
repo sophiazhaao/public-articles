@@ -61,13 +61,13 @@
             <p class="date">april 17, 2026</p>
         </div>
     </div>
-	<div class="entry" data-index="2">
+	<div class="entry" data-index="3">
         <div class="entry-header">
             <h2>how do i balance school & recruiting?</h2>
             <p class="date">april 23, 2026</p>
         </div>
     </div>
-	<div class="entry" data-index="2">
+	<div class="entry" data-index="4">
         <div class="entry-header">
             <h2>you took a gap semester?</h2>
             <p class="date">may 3, 2026</p>
@@ -93,7 +93,26 @@
     {
       title: 'how do i even make a resume?',
       date: 'march 27, 2026',
-      body: 'Write your full post content here. This can be as long as you like — it only shows up on the detail page, so the list stays clean. Add multiple paragraphs, thoughts, stories, whatever you want!'
+      body: `
+		<p>Here's my general resume tips, and you can use this as a guideline for creating your own resume:</p>
+		<ol>
+			<li>Use a resume template!! There's a time and place for cool, flashy, design-centered resumes, but a SWE internship or job is not that place! The reality is that your resume will probably not be read by a person first. It will likely be screened by a machine before it reaches a recruiters eyes. With that in mind, it needs to pass both tests.</li>
+			<ul>
+				<li>Use a clean and simple format that's widely successful. My favorite is <a href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs?gad_source=1&gad_campaignid=23369341867&gbraid=0AAAAAqfJXW6GmtvBZT0KbThgaQet8muop&gclid=CjwKCAjwwdbPBhBgEiwAxBRA4a5YebPvPcDgG2i24XvTJCa6P0H8yYH48DuFeS8L2HLxMYC9kBz_8xoC07wQAvD_BwE">Jake's Resume template</a> in Overleaf.</li>
+				<li>Use LaTeX to construct your resume! It's more precise than Google Docs or Word, and it's the best for getting parsed accurately by ATS-systems. Overleaf uses LaTeX, and is beginner friendly!</li>
+			</ul>
+			<li>Include your graduation information, especially for internships!! Many internships have grad year requirements, and not including it can get your resume automatically tossed.</li>
+			<li>At the end, read through your resume as if a recruiter were reading it. You can use AI to help you create your resume, but at the end of the day, a real person will see it! Do the sentences make sense? Is the formatting easier to follow? Is important information (name, school, graduation year, previous experience) easy to find? You have less than 30 seconds to impress a recruiter! Make it easy for them to say YES!</li>
+		</ol>
+		<p>Now, a less popular, but super important topic. How do I make a resume if I don't have any relevant experience, but in order to get experience, I need to apply with a resume?</p>
+		<p>I get it. I've been there. This chicken and egg problem is the reason I put off recruiting until my sophomore year, when most of my friends started their freshman year.</p>
+		<p>How can I make a competitive resume when I don't have any experience yet?</p>
+		<p>I remember I would feel embarrassed when friends asked to see my resume freshman year because honestly, there wasn't really anything on it. For the better half of freshman year, my honest answer was that I didn't have a resume. And, as I reasoned, because I didn't even have a resume, there was no way I could apply to internships for the following summer.</p>
+		<p>But the thing is, you DO have relevant experience. It just might not be an internship, or a part-time software engineering role. It could be from a club you're involved in, or a project you worked on in class, or something you built outside of class. It exists, you just have to find a way to frame it.</p>
+		<p>I worked a part-time job through high school. I also joined an on campus club as a marketing coordinator. I included both on my resume. It might not be software engineering, but it showed that I could work on a team, and overcome challenges.</p>
+		<p>I built a required final project for a class that I was really proud of. I included that on my resume. It might not be a real job, but it's a real project that I had actually built. It doesn't have to be huge. I put a food blog that I'd created on my resume because I'd built it using HTML and CSS in class, and those could almost be programming languages.</p>
+		<p>TLDR: If you do something, you can put it on your resume. It doesn't matter if it doesn't feel impressive, or you didn't spend that much time on it, or if it was required for a class. Something is better than nothing.</p>
+	  `
     },
     {
       title: 'where do i apply to jobs?',
@@ -122,7 +141,7 @@
     const e = entries[i];
     $('#detail-title').text(e.title);
     $('#detail-date').text(e.date);
-    $('#detail-body').text(e.body);
+    $('#detail-body').html(e.body);
     $('#list-page').addClass('hidden');
     $('#detail-page').addClass('visible');
     window.scrollTo(0, 0);
