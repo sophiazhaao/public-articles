@@ -1,64 +1,125 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="the food page of my blog, very similar in style to the drinks page, but filled with some of the yummiest things i've eaten in the recent years.">
-	<title>food log</title>
-	<link rel="stylesheet" href="main.css">
+  <meta charset="utf-8">
+  <meta name="description" content="my blog">
+  <title>blog</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    .entry {
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .entry:hover { opacity: 0.85; }
+
+    #detail-page {
+      display: none;
+      padding: 1rem;
+    }
+    #detail-page.visible { display: block; }
+    #list-page.hidden { display: none; }
+
+    .back-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      margin-bottom: 1rem;
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .detail-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .detail-title { margin: 1rem 0 0.25rem; }
+    .detail-date { margin: 0.25rem 0; opacity: 0.6; font-size: 0.9rem; }
+    .detail-body { margin-top: 1rem; line-height: 1.7; }
+  </style>
 </head>
 <body>
-	<div id="header">
-		<h1>yummy food log!</h1>
-	</div> <!-- #header -->
 
-	<div class="entry">
-		<img src="img/elefante.png" alt="elefante!">
-		<h2>elefante</h2>
-		<p class="rating">>>> / >>>>></p>
-		<p class="cost">$$$$ / $$$$</p>
-		<p class="thoughts">i went here for a quick lunch in november, and the view and vibes were absolutely stunning. however, while i enjoyed the food, it's not the best food i've ever had. i'd highly recommend going during lunch though, because they have a 3 course lunch menu for just $35/person, which is much better than going during dinner or another time, since you get to try a lot of the menu items. i'd also highly recommend the eggplant dip! it comes with naan and is so light and delicious.</p>
-	</div> <!-- entry -->
+<div id="header">
+  <h1>my blog!</h1>
+</div>
 
-	<div class="entry">
-		<img src="img/mkbbq.png" alt="korean bbq!">
-		<h2>m korean bbq</h2>
-		<p class="rating">>>>> / >>>>></p>
-		<p class="cost">$$$ / $$$$</p>
-		<p class="thoughts">unlike most of the kbbq places i've tried here in LA, this place has no all you can eat options, but it's still worth every penny! the service is incredible and they help you grill all the meats, and me and my friends left very full and happy. they will bring out as many sides as you ask for and their steamed egg was just absolutely delicious. it's located in the source OC, so it's perfect if you're looking to do some shopping either before or after enjoying a meal!</p>
-	</div> <!-- entry -->
+<!-- LIST PAGE -->
+<div id="list-page">
+  <div class="entry" data-index="0">
+    <img src="img/post1.png" alt="post 1 photo">
+    <h2>my first post</h2>
+    <p class="date">january 3, 2025</p>
+  </div>
 
-	<div class="entry">
-		<img src="img/pizza.png" alt="pizza!">
-		<h2>spin! pizza</h2>
-		<p class="rating">>>>> / >>>>></p>
-		<p class="cost">$$ / $$$$</p>
-		<p class="thoughts">spin! is one of my favorites from my hometown in kansas, and i'm sad to see that it's not in lots of other places because their pizza (and ranch) is phenomenal. it's one of my favorite date night meals, because it's convenient, delicious, and has so many different options. my favorite order is the veggie pizza with a ranch swirl AND a side of ranch! comes with so many delicious veggies and their ranch is (i'll say it again) absolutely delicious</p>
-	</div> <!-- entry -->
+  <div class="entry" data-index="1">
+    <img src="img/post2.png" alt="post 2 photo">
+    <h2>a second post</h2>
+    <p class="date">february 14, 2025</p>
+  </div>
 
-	<div class="entry">
-		<img src="img/bcd.png" alt="bcd tofu house!">
-		<h2>bcd tofu house</h2>
-		<p class="rating">>>>>> / >>>>></p>
-		<p class="cost">$$$ / $$$$</p>
-		<p class="thoughts">i've heard so many amazing things about BCD, and when i went to try it for the first time, i'm happy to report that it did not disappoint at all. i got the classic bulgogi, with the soup, and they were both delicious, along with the hot stone rice. they gave us so many sides that i couldn't decide which one to try first, and their takeout containers (for taking home leftovers) were honestly awesome and made the experience at home even more magical after i'd finished eating there.</p>
-	</div> <!-- entry -->
+  <div class="entry" data-index="2">
+    <img src="img/post3.png" alt="post 3 photo">
+    <h2>another thing i wrote</h2>
+    <p class="date">march 22, 2025</p>
+  </div>
+</div>
 
-	<div class="entry">
-		<img src="img/sushi.png" alt="sushi!">
-		<h2>bang bang</h2>
-		<p class="rating">>>> / >>>>></p>
-		<p class="cost">$$$ / $$$$</p>
-		<p class="thoughts">i booked a reservation here for a dinner date (not realizing that this was both a sushi place and a nightclub) but the ambiance was actually a lot nicer than i expected it to be. the rolls were also amazing, but the appetizers were just alright. we were seated on a couch, which i've never experiences in a restaurant, but it was very cozy and the lighting was good. the rolls, i felt, were a bit overpriced, but i don't have anything in specific to critique.</p>
-	</div> <!-- entry -->
+<!-- DETAIL PAGE -->
+<div id="detail-page">
+  <button class="back-btn" id="back-btn">← back to all posts</button>
+  <img class="detail-img" id="detail-img" src="" alt="">
+  <h2 class="detail-title" id="detail-title"></h2>
+  <p class="detail-date" id="detail-date"></p>
+  <div class="detail-body" id="detail-body"></div>
+</div>
 
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script src="typewriter/jquerytypewriter.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="typewriter/jquerytypewriter.js"></script>
+<script>
+  $('h1').typewrite({ callback: function(){}, delay: 90 });
 
-	<script>
-		$('h1').typewrite({
-			'callback': function(){},
-			'delay': 90
-		});
-	</script>
+  const entries = [
+    {
+      img: 'img/post1.png', alt: 'post 1 photo',
+      title: 'my first post',
+      date: 'january 3, 2025',
+      body: 'Write your full post content here. This can be as long as you like — it only shows up on the detail page, so the list stays clean. Add multiple paragraphs, thoughts, stories, whatever you want!'
+    },
+    {
+      img: 'img/post2.png', alt: 'post 2 photo',
+      title: 'a second post',
+      date: 'february 14, 2025',
+      body: 'Your second post content goes here. You can write as much as you want and it will all appear nicely on the detail page when someone clicks through.'
+    },
+    {
+      img: 'img/post3.png', alt: 'post 3 photo',
+      title: 'another thing i wrote',
+      date: 'march 22, 2025',
+      body: 'Third post content here. Remember: update both the HTML entry div above AND the matching object in this entries array when you add a new post.'
+    }
+  ];
+
+  $('.entry').on('click', function () {
+    const i = $(this).data('index');
+    const e = entries[i];
+    $('#detail-img').attr({ src: e.img, alt: e.alt });
+    $('#detail-title').text(e.title);
+    $('#detail-date').text(e.date);
+    $('#detail-body').text(e.body);
+    $('#list-page').addClass('hidden');
+    $('#detail-page').addClass('visible');
+    window.scrollTo(0, 0);
+  });
+
+  $('#back-btn').on('click', function () {
+    $('#detail-page').removeClass('visible');
+    $('#list-page').removeClass('hidden');
+    window.scrollTo(0, 0);
+  });
+</script>
 </body>
 </html>
