@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     height: 90px;
-    font-size: 1.5em;
+    font-size: 1em;
     padding-top: 30px;
 }
 h1 {
@@ -29,7 +29,7 @@ body {
     font-size: 0.95em;
     line-height: 1.75;
     color: #5C4033;
-    padding: 14px 18px;
+    padding: 8px 18px;
     background-color: rgba(183, 193, 172, 0.25);
     border-left: 4px solid rgba(183, 193, 172, 1.0);
     border-radius: 0 8px 8px 0;
