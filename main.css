@@ -23,6 +23,7 @@ h1 {
 }
 body {
     margin: 0px;
+    padding-bottom: 60px;
 }
 #intro {
     width: 580px;
