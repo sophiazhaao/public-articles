@@ -238,22 +238,24 @@
     }
   ];
 
-  $('.entry').on('click', function () {
-    const i = $(this).data('index');
-    const e = entries[i];
-    $('#detail-title').text(e.title);
-    $('#detail-date').text(e.date);
-    $('#detail-body').html(e.body);
-    $('#list-page').addClass('hidden');
-    $('#detail-page').addClass('visible');
-    window.scrollTo(0, 0);
-  });
+$('.entry').on('click', function () {
+	const i = $(this).data('index');
+	const e = entries[i];
+	$('#detail-title').text(e.title);
+	$('#detail-date').text(e.date);
+	$('#detail-body').html(e.body);
+	$('#list-page').addClass('hidden');
+	$('#intro').hide();
+	$('#detail-page').addClass('visible');
+	window.scrollTo(0, 0);
+});
 
-  $('#back-btn').on('click', function () {
-    $('#detail-page').removeClass('visible');
-    $('#list-page').removeClass('hidden');
-    window.scrollTo(0, 0);
-  });
+$('#back-btn').on('click', function () {
+	$('#detail-page').removeClass('visible');
+	$('#list-page').removeClass('hidden');
+	$('#intro').show();
+	window.scrollTo(0, 0);
+});
 </script>
 </body>
 </html>

@@ -21,15 +21,17 @@ h1 {
 }
 #intro {
     width: 580px;
-    margin: 28px auto 8px auto;
+    margin: 24px auto 4px auto;
     font-family: sans-serif;
-    font-size: 1em;
+    font-size: 0.95em;
     line-height: 1.75;
     color: #5C4033;
-    opacity: 0.85;
-    font-style: italic;
-    padding: 0 4px;
-    }
+    padding: 14px 18px;
+    background-color: rgba(183, 193, 172, 0.25);
+    border-left: 4px solid rgba(183, 193, 172, 1.0);
+    border-radius: 0 8px 8px 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0px;
 }
