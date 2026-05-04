@@ -19,6 +19,9 @@ h1 {
     margin-right: auto;
     font-family: sans-serif;
 }
+body {
+    margin: 0px;
+}
 #intro {
     width: 580px;
     margin: 24px auto 4px auto;
@@ -31,18 +34,6 @@ h1 {
     border-left: 4px solid rgba(183, 193, 172, 1.0);
     border-radius: 0 8px 8px 0;
     box-sizing: border-box;
-}
-body {
-    margin: 0px;
-}
-#homebutton, #foodbutton, #drinkbutton {
-    border-radius: 50px;
-    background-color: rgba(183, 193, 172, 1.0);
-    width: 150px;
-    height: 50px;
-    text-align: center;
-    color: #FFF;
-    font-size: 1.25em;
 }
 @font-face {
     font-family: "Unicorn Giggles";
