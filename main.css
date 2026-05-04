@@ -4,20 +4,22 @@
     background-position: center;
     height: 90px;
     font-size: 1em;
-    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 h1 {
     margin: 0px;
     text-align: center;
-    line-height: 60px;
     background-color: rgba(183, 193, 172, 0.75);
     color: #FFF;
     width: 850px;
     height: 60px;
     border-radius: 50px;
-    margin-left: auto;
-    margin-right: auto;
     font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 body {
     margin: 0px;
